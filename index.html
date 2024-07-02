@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Ngủ Ngon</title>
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+            color: white;
+            text-align: center;
+            overflow: hidden;
+            position: relative; /* Để các trái tim chuyển động đúng vị trí */
+        }
+        .message {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1; /* Để đẩy lên phía trước */
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: blink 1.5s infinite alternate;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0; /* Để đẩy xuống phía sau */
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: float 5s infinite linear;
+        }
+        .star {
+            position: absolute;
+            width: 30px; /* Kích thước lớn hơn */
+            height: 30px; /* Kích thước lớn hơn */
+            background-color: #ffd700;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: twinkle 3s infinite linear;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        @keyframes twinkle {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0.7; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="message">
+        <h1>Ngủ Ngon Nhaaaa</h1>
+        <h1>Ngừi Đẹp</h1>
+
+    </div>
+    <div class="decoration">
+        <div class="heart" style="top: 10%; left: 20%;"></div>
+        <div class="heart" style="top: 20%; left: 50%;"></div>
+        <div class="heart" style="top: 30%; left: 80%;"></div>
+        <div class="heart" style="top: 40%; left: 35%;"></div>
+        <div class="heart" style="top: 50%; left: 65%;"></div>
+        <div class="heart" style="top: 60%; left: 15%;"></div>
+        <div class="heart" style="top: 70%; left: 45%;"></div>
+        <div class="heart" style="top: 80%; left: 75%;"></div>
+        <div class="heart" style="top: 90%; left: 25%;"></div>
+        <div class="star" style="top: 15%; left: 70%;"></div>
+        <div class="star" style="top: 30%; left: 25%;"></div>
+        <div class="star" style="top: 50%; left: 85%;"></div>
+        <div class="star" style="top: 65%; left: 45%;"></div>
+    </div>
+</body>
+</html>
